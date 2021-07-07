@@ -13,6 +13,8 @@ fun main() {
     val num:Int = 2
     println("\nUsando o passo = ${num} com o step")
     step(num)
+    println("\nUsando o letters")
+    letters()
 }
 
 fun direto(){
@@ -38,4 +40,14 @@ fun step (num:Int){
     for (i in 0..20 step num){
     print("$i ")
  } 
+}
+
+fun letters (){
+    val sArray = "Olha essa string!"
+    for (l in sArray){
+        //Printa um por linha:
+        //println(l.toUpperCase()+ " ")
+        //Printa tudo na mesma linha:
+        print(l.toUpperCase())
+    }
 }

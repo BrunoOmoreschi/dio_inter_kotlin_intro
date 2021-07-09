@@ -1,6 +1,7 @@
 package com.github.brunoomoreshi.calculadora_exercicio
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -23,7 +24,11 @@ class MainActivity : AppCompatActivity() {
             //Variavel que guarda o que está sendo digitado para ser operado.
             var digitado = arrayListOf<String?>()
             tvDigitados.text = digitado.toString()
-            log.d
+            Log.d (digitado.toString(),tvDigitados.toString() )
+
+        //CRIAR FUN Q SEJA CHAMADA EM CADA BOTÃO PARA ATUALIZAR A LISTA, LISTONCLICK É QUE ESTÁ MANDANDO O TEXTO PARA A TELA
+        //CLICA, CHAMA A FUN, ATUALIZA A LISTA DO QUE FOI DIG, E CHAMA ESSE RESULTADO PARA A TELA
+        //BOTÃO DE CALCULAR: FUN LE A LISTA, VERIF. SE TEM */ SE SIM CRIA UMA LISTA COM OS AFRENTE E APOS E CALC CADA UM, E TROCA NA LISTA, SE NÃO, PEGA OS ELE. 2A2 E FAZ +-
 
 
                 //Encapsulamento da lista em um variavel

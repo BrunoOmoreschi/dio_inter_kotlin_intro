@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">calculadora_exercicio</string>
+    <string name="btCalc_txt">=</string>
+    <string name="btInv_txt">(-)</string>
+    <string name="btExp_txt">EXP</string>
+    <string name="btDot_Txt">.</string>
+    <string name="btZero_txt">0</string>
+    <string name="btMinus_txt">-</string>
+    <string name="btPlus_txt">+</string>
+    <string name="bt3_txt">3</string>
+    <string name="bt2_txt">2</string>
+    <string name="bt1_txt">1</string>
+    <string name="bt4_txt">4</string>
+    <string name="bt5_txt">5</string>
+    <string name="bt6">6</string>
+    <string name="btTimes_txt">X</string>
+    <string name="btDivide_txt">/</string>
+    <string name="bt7_txt">7</string>
+    <string name="bt8">8</string>
+    <string name="bt9_txt">9</string>
+    <string name="btDel_txt">DEL</string>
+    <string name="btAc_txt">AC</string>
+    <string name="btCubicPower_txt">x³</string>
+    <string name="btNPower_txt">x^y</string>
+    <string name="btSRoot_txt">RAIZ</string>
+    <string name="btSquarePower_ttx">x^2</string>
+    <string name="btMPlus_txt">M+</string>
+    <string name="btLog_txt">LOG</string>
+    <string name="btLn_txt">ln</string>
+    <string name="btTan_txt">Tan</string>
+    <string name="btCos_txt">cos</string>
+    <string name="btSen_txt">sen</string>
+    <string name="tvDigitados_txt">Digite algo para calcular!!</string>
+    <string name="NumZero">0</string>
+</resources>

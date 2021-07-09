@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvEdicao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDigitados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:clickable="true"
+                android:hint="@string/tvDigitados_txt"
+                android:padding="8dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvResultados"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:clickable="true"
+                android:padding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDigitados">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <LinearLayout
+            android:id="@+id/vlTeclado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/hlUm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btLog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btLog_txt"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btLn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btLn_txt"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btTan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btTan_txt"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btCos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btCos_txt"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btSen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="16sp"
+                    android:layout_marginRight="16sp"
+                    android:layout_weight="1"
+                    android:text="@string/btSen_txt"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hlDois"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btCubicPower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btCubicPower_txt"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btNPower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btNPower_txt"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btSRoot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btSRoot_txt"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btSquarePower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btSquarePower_ttx"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btMPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="16sp"
+                    android:layout_marginRight="16sp"
+                    android:layout_weight="1"
+                    android:text="@string/btMPlus_txt"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hlTres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/bt7_txt" />
+
+                <Button
+                    android:id="@+id/bt8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/bt8" />
+
+                <Button
+                    android:id="@+id/bt9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/bt9_txt" />
+
+                <Button
+                    android:id="@+id/btDel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btDel_txt" />
+
+                <Button
+                    android:id="@+id/btAc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="16sp"
+                    android:layout_marginRight="16sp"
+                    android:layout_weight="1"
+                    android:text="@string/btAc_txt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hlQuatro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/bt4_txt" />
+
+                <Button
+                    android:id="@+id/bt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/bt5_txt" />
+
+                <Button
+                    android:id="@+id/bt6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/bt6" />
+
+                <Button
+                    android:id="@+id/btTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btTimes_txt" />
+
+                <Button
+                    android:id="@+id/btDivide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="16sp"
+                    android:layout_marginRight="16sp"
+                    android:layout_weight="1"
+                    android:text="@string/btDivide_txt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hlCinco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/bt1_txt" />
+
+                <Button
+                    android:id="@+id/bt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/bt2_txt" />
+
+                <Button
+                    android:id="@+id/bt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/bt3_txt" />
+
+                <Button
+                    android:id="@+id/btPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btPlus_txt" />
+
+                <Button
+                    android:id="@+id/btMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="16sp"
+                    android:layout_marginRight="16sp"
+                    android:layout_weight="1"
+                    android:text="@string/btMinus_txt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/hlSeis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btZero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16sp"
+                    android:layout_marginLeft="16sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btZero_txt"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btDot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btDot_Txt"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btExp_txt"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btInv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:text="@string/btInv_txt"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btCalc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4sp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginEnd="16sp"
+                    android:layout_marginRight="16sp"
+                    android:layout_weight="1"
+                    android:text="@string/btCalc_txt"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

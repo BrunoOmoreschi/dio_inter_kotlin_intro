@@ -1,30 +1,54 @@
 package com.github.brunoomoreshi.calculadora_exercicio
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import androidx.lifecycle.ViewModelProvider
 import android.widget.TextView
-
-
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textViewModel = (ViewModelProvider(this ).get(TextViewModel::class.java))
-        val contas = listOf<Float?>()
-        //
-        var tvDigitados = findViewById<TextView>(R.id.tvDigitados)
+        //Variavel para o jetpack
+        //Terminar de implementar!!
+        //val txLiveData = (ViewModelProvider(this ).get(txLiveData::class.java))
 
-        if (contas.isEmpty()){
+            //Encapsulamento do texto do campo de digitação em uma variavel
+            var tvDigitados = findViewById<TextView>(R.id.tvDigitados)
+
+            //Variavel que guarda o que está sendo digitado para ser operado.
+            var digitado = arrayListOf<String?>()
+            tvDigitados.text = digitado.toString()
+            log.d
+
+
+                //Encapsulamento da lista em um variavel
+                val rvLista = findViewById<RecyclerView>(R.id.rvLista)
+                //Chamado do adapter da recycler view (ContasAdapter.kt)
+
+                rvLista.layoutManager = LinearLayoutManager(this)
+
+                //Sample data
+                val exp1 = expressaoEresultado ("1+1",2)
+                val exp2 = expressaoEresultado ("1*1",1)
+                val exp3 = expressaoEresultado ("1/1",1)
+
+                //Variavel que encapsula as expressões (Array com data class definido)
+                //Carrega o Sample data, mas conf. o usuario vai fazendo contas vamos atualizando
+                val listaContas = listOf(exp1,exp2,exp3)
+                //Manda a lista de items para o adapter
+                rvLista.adapter = ContasAdapter(listaContas)
+
+
+
+        //Só pra ficar charmoso dá a dica de que deve ser digitado algo para ser calculado.
+        if (digitado.isEmpty()){
             tvDigitados.text = tvDigitados.hint
         }
-
-
-
-        //val listaContaAtual :Float? = []
 
         //Sequencia dos botões numéricos, eles são armazenados assim que clicados
 
@@ -32,9 +56,11 @@ class MainActivity : AppCompatActivity() {
         btZero.setOnClickListener {
             //to implement
             //Linha de teste: Envia o valor do botão para a area de digitação
-            tvDigitados.text = btZero.text
-
+            val nada = btZero.text
+            digitado.add(nada.toString())
+            //tvDigitados.text = btZero.text
         }
+
         val btOne = findViewById<Button>(R.id.bt1)
         btOne.setOnClickListener {
             //to implement
